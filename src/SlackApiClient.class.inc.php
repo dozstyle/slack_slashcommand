@@ -57,18 +57,4 @@
       );
       $this->post(__FUNCTION__, $url, $header, $data);
     }
-
-    public function rtmConnect($token, $batch_presence_aware = false, $presence_sub = false) {
-      $path = '/rtm.connect';
-      $url = $this->url_base . $path;
-      $header = array(
-        'Content-type: multipart/form-data'
-      );
-      $data = array(
-        'token' => $token,
-        'batch_presence_aware' => $batch_presence_aware,
-        'presence_sub' => $presence_sub
-      );
-      $this->post(__FUNCTION__, $url, $header, $data);
-    }
   }
